@@ -9,16 +9,14 @@ using FinalTaskEPAM.Utils;
 using FluentAssertions;
 using OpenQA.Selenium;
 
-
 namespace FinalTaskEPAM.Tests
 {
-	[Collection("ParallelTestCollection")]
-	public class LoginTests : IDisposable
+	public class ChromeLoginTests : IDisposable
 	{
 		private readonly IWebDriver _driver;
 		private readonly LoginPageObject _loginPage;
 
-		public LoginTests()
+		public ChromeLoginTests()
 		{
 			_driver = WebDriverFactory.CreateWebDriver("chrome");
 			_loginPage = new LoginPageObject(_driver);
