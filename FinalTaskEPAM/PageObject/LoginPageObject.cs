@@ -17,9 +17,9 @@ namespace FinalTaskEPAM.PageObject
 			_driver.Navigate().GoToUrl("https://www.saucedemo.com/");
 		}
 
-		public IWebElement UsernameField => _driver.FindElement(By.Id("user-name"));
-		public IWebElement PasswordField => _driver.FindElement(By.Id("password"));
-		public IWebElement LoginButton => _driver.FindElement(By.Id("login-button"));
+		public IWebElement UsernameField => _driver.FindElement(By.CssSelector("#user-name"));
+		public IWebElement PasswordField => _driver.FindElement(By.CssSelector("#password"));
+		public IWebElement LoginButton => _driver.FindElement(By.CssSelector("#login-button"));
 		public IWebElement ErrorMessage => _driver.FindElement(By.CssSelector("[data-test='error']"));
 
 		public void Login(string username, string password)
