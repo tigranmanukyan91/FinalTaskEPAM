@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace FinalTaskEPAM.PageObject
 {
@@ -33,7 +28,7 @@ namespace FinalTaskEPAM.PageObject
 		{
 			UsernameField.Clear();
 		}
-		
+
 		public void ClearPasswordField()
 		{
 			PasswordField.Clear();

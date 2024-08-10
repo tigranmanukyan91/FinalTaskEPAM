@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FinalTaskEPAM.Drivers;
+﻿using FinalTaskEPAM.Drivers;
 using FinalTaskEPAM.PageObject;
 using FinalTaskEPAM.Utils;
 using FluentAssertions;
@@ -34,8 +29,6 @@ namespace FinalTaskEPAM.Tests
 			_loginPage.ClearUsernameField();
 			_loginPage.ClearPasswordField();
 			_loginPage.ErrorMessage.Text.Should().Be("Epic sadface: Username is required");
-
-			TestLogger.Logger.Information("UC1 test completed successfully");
 		}
 
 		[Theory]
@@ -49,8 +42,6 @@ namespace FinalTaskEPAM.Tests
 			_loginPage.ClearPasswordField();
 
 			_loginPage.ErrorMessage.Text.Should().Be("Epic sadface: Password is required");
-
-			TestLogger.Logger.Information("UC2 test completed successfully");
 		}
 
 		[Theory]
@@ -64,8 +55,6 @@ namespace FinalTaskEPAM.Tests
 			_loginPage.Login(username, password);
 
 			_driver.Title.Should().Be("Swag Labs");
-
-			TestLogger.Logger.Information("UC3 test completed successfully");
 		}
 		public void Dispose()
 		{

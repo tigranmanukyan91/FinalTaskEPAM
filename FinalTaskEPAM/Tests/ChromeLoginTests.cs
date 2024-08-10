@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FinalTaskEPAM.Drivers;
+﻿using FinalTaskEPAM.Drivers;
 using FinalTaskEPAM.PageObject;
 using FinalTaskEPAM.Utils;
 using FluentAssertions;
@@ -29,7 +24,7 @@ namespace FinalTaskEPAM.Tests
 			TestLogger.Logger.Information("Starting UC1 test with empty credentials");
 
 			_loginPage.Login(username, password);
-			
+
 			_loginPage.ClearUsernameField();
 			_loginPage.ClearPasswordField();
 			_loginPage.ErrorMessage.Text.Should().Be("Epic sadface: Username is required");
